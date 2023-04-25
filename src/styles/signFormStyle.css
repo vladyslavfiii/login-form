@@ -1,0 +1,219 @@
+.title{
+	width: 750px;
+	height:100px;
+
+	font-size: 50px;
+	font-family: arial black;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	color: white;
+}
+.sign{
+	width: 1000px;
+	height: 1250px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.signInForm{
+	width: 750px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	border: 0px;
+	border-radius: 10px;
+	background: #5b747c;
+
+	color: white;
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.signTypeNameStyle{
+	width: 600px;
+	height: 100px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	font-family: Consolas;
+	font-size: 30px;
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.signFormTextField{
+	width: 600px;
+
+	font-family: Consolas;
+	font-size: 25px;
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.signFormTextField span{
+	opacity: 0.5;
+	font-size: 15px;
+}
+.signFormInputField{
+	width: 570px;
+	height: 31px;
+
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+	border: 2.5px solid white;
+	border-radius: 25px;
+
+	font-size: 20px;
+	font-family: Consolas;
+
+	transition: 1s;
+}
+.signFormInputField:focus{
+	background: black;
+	color: white;
+
+	transition: 1s;
+}
+.signFormErrorInputField{
+	width: 570px;
+	height: 31px;
+
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+	border: 2.5px solid #e62020;
+	border-radius: 25px;
+
+	font-size: 20px;
+	font-family: Consolas;
+
+	transition: 1s;
+}
+.signFormErrorInputField:focus{
+	background: black;
+	color: white;
+
+	transition: 1s;
+}
+.signFormButtonsBlock{
+	width: 600px;
+	height: 35px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.signFormButtons{
+	width: 200px;
+	height: 35px;
+
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+
+	border: 0px;
+	border-radius: 25px;
+
+	font-family:Consolas;
+	font-size: 15px;
+
+	transition: 1s;
+}
+.signFormButtons:hover{
+	background: black;
+	color: white;
+}
+.additional{
+	width: 750px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	border: 0px;
+	border-radius: 25px;
+	background: #5b747c;
+
+	color: white;
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.additionalButtonsBlock{
+	width: 600px;
+	height: 35px;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+/*SIGN UP*/
+.signUpForm{
+	width: 750px;
+
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	border: 0px;
+	border-radius: 25px;
+	background: #5b747c;
+
+	color: white;
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.alertMessage{
+	width: 590px;
+
+	border: 0px;
+	border-radius: 25px;
+	background: #242d33;
+
+	color: white;
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+	padding-left: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+	font-family: Consolas;
+	font-size: 15px;
+}

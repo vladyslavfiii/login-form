@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>SIGN FORM</title>
+		<link rel="stylesheet" href="../src/styles/style.css">
+		<link rel="stylesheet" href="../src/styles/signFormStyle.css">
+		
+		<link rel="shortcut icon" type="image/ico" href="../src/favicon.ico"/>
+	</head>
+	
+	<body>
+
+<!-- SIGN FORM -->
+	<div class="sign">
+
+		<div class="title">F.III</div>
+<!-- SIGN IN FORM -->
+		<form class="signInForm">
+			<label class="signTypeNameStyle">Sign In</label>
+
+			<label class="signFormTextField" for="email">email</label>
+
+			<input class="signFormInputField" type="text" name="emailInput" placeholder="enter your email here" maxlength="50" minlength="5">
+
+			<label class="signFormTextField" for="password" p>password <span>(more than 5 character)</span></label>
+
+			<input class="signFormInputField" type="password" name="passwordInput" placeholder="enter your password here" maxlength="50" minlength="5">
+
+			<div class="signFormButtonsBlock"><button class="signFormButtons" id="signInButton" type="button" onclick="signInFunction()">Sign In</button></div>
+
+			<form class="additional">
+
+				<div class="additionalButtonsBlock">
+
+					<button class="signFormButtons" type="button">Forgot Password</button> 
+
+					<button class="signFormButtons" type="button" id="signUpButton" onclick="signTypeSwitch()">Go to Sign Up</button>
+
+				</div>
+				
+				<div class="title"></div>
+
+			</form>	
+
+		</form>
+
+<!-- SIGN UP -->
+		
+		<form class="signUpForm">
+
+			<label class="signTypeNameStyle">Sign Up</label>
+
+			<label class="signFormTextField" for="fname">first name <span>(more than 3 character)</span></label>
+
+			<input class="signFormInputField" type="text" name="firstNameInput" placeholder="enter your first name here" maxlength="50" minlength="3">
+
+			<label class="signFormTextField" for="lname">last name <span>(more than 3 character)</span></label>
+
+			<input class="signFormInputField" type="text" name="lastNameInput" placeholder="enter your last name here" maxlength="50" minlength="3">
+
+			<label class="signFormTextField" for="email">email</label>
+
+			<input class="signFormInputField" type="text" name="emailInput1" placeholder="enter your email here" maxlength="50" minlength="5">
+
+			<label class="signFormTextField" for="password" p>password <span>(more than 5 character)</label>
+
+			<input class="signFormInputField" type="password" name="passwordInput1" placeholder="enter your password here" maxlength="50" minlength="5">
+
+			<label class="signFormTextField" for="password" p>password <span>repeat</span></label>
+
+			<input class="signFormInputField" type="password" name="passwordInput2" placeholder="enter your password here" maxlength="50" minlength="5">
+
+			<div class="signFormButtonsBlock"><button class="signFormButtons" id="signIn" type="button" onclick="signUpFunction()">Sign Up</button></div>
+
+			<div class="signFormButtonsBlock">
+
+				<button class="signFormButtons" type="button" onclick="signTypeSwitch()">Go to Sign In</button>
+
+			</div>
+
+			<div class="title"></div>
+
+		</form>
+
+		</div>
+
+		<script src="../src/scripts/script.js"></script>
+		<script src="../src/scripts/signFormScript.js"></script>
+		<script src="../src/scripts/signInFormScript.js"></script>
+		<script src="../src/scripts/signUpFormScript.js"></script>
+	</body>
+</html>
