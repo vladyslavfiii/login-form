@@ -15,75 +15,111 @@
 	<div class="sign">
 
 		<div class="title">F.III</div>
+
 <!-- SIGN IN FORM -->
-		<form class="signInForm">
-			<label class="signTypeNameStyle">Sign In</label>
 
-			<label class="signFormTextField" for="email">email</label>
+		<div class="signInForm" id="signInForm">
 
-			<input class="signFormInputField" type="text" name="emailInput" placeholder="enter your email here" maxlength="50" minlength="5">
+			<div class="signFormStructureBlock">
+				<div class="signTypeNameStyle">Sign In</div>
+			</div>
 
-			<label class="signFormTextField" for="password" p>password <span>(more than 5 character)</span></label>
+			<div class="signFormStructureBlock">
+				<div class="signFormTextField">email address</div>
+				<input class="signFormInputField" type="text"
+				id="signInFormEmailInputField" 
+				placeholder="enter your email here" maxlength="50" minlength="5" 
+				onkeyup="signInFunction(this)" onclick="signInFunction(this)">
+			</div>
 
-			<input class="signFormInputField" type="password" name="passwordInput" placeholder="enter your password here" maxlength="50" minlength="5">
+			<div class="signFormStructureBlock">
+				<div class="signFormTextField">password <span>(more than 5 character)</span></div>
+				<input class="signFormInputField" type="password" 
+				id="signInFormPasswordInputField"
+				placeholder="enter your password here" maxlength="50" minlength="5"
+				onkeyup="signInFunction(this)" onclick="signInFunction(this)">
+			</div>
 
-			<div class="signFormButtonsBlock"><button class="signFormButtons" id="signInButton" type="button" onclick="signInFunction()">Sign In</button></div>
+			<div class="signFormButtonsStructureBlock">
 
-			<form class="additional">
-
-				<div class="additionalButtonsBlock">
-
-					<button class="signFormButtons" type="button">Forgot Password</button> 
-
-					<button class="signFormButtons" type="button" id="signUpButton" onclick="signTypeSwitch()">Go to Sign Up</button>
-
-				</div>
-				
-				<div class="title"></div>
-
-			</form>	
-
-		</form>
-
-<!-- SIGN UP -->
-		
-		<form class="signUpForm">
-
-			<label class="signTypeNameStyle">Sign Up</label>
-
-			<label class="signFormTextField" for="fname">first name <span>(more than 3 character)</span></label>
-
-			<input class="signFormInputField" type="text" name="firstNameInput" placeholder="enter your first name here" maxlength="50" minlength="3">
-
-			<label class="signFormTextField" for="lname">last name <span>(more than 3 character)</span></label>
-
-			<input class="signFormInputField" type="text" name="lastNameInput" placeholder="enter your last name here" maxlength="50" minlength="3">
-
-			<label class="signFormTextField" for="email">email</label>
-
-			<input class="signFormInputField" type="text" name="emailInput1" placeholder="enter your email here" maxlength="50" minlength="5">
-
-			<label class="signFormTextField" for="password" p>password <span>(more than 5 character)</label>
-
-			<input class="signFormInputField" type="password" name="passwordInput1" placeholder="enter your password here" maxlength="50" minlength="5">
-
-			<label class="signFormTextField" for="password" p>password <span>repeat</span></label>
-
-			<input class="signFormInputField" type="password" name="passwordInput2" placeholder="enter your password here" maxlength="50" minlength="5">
-
-			<div class="signFormButtonsBlock"><button class="signFormButtons" id="signIn" type="button" onclick="signUpFunction()">Sign Up</button></div>
-
-			<div class="signFormButtonsBlock">
-
-				<button class="signFormButtons" type="button" onclick="signTypeSwitch()">Go to Sign In</button>
+				<button class="signFormButtons" id="signInButton" type="button" onclick="signInButtonFunction()">Sign In</button>
+				<button class="signFormButtons" id="signInForgotPasswordButton" type="button">Forgot Password</button> 
 
 			</div>
 
-			<div class="title"></div>
+			<div class="signFormButtonsStructureBlock">
 
-		</form>
+				<div class="line" style="width: 600px;"></div>
+				<div class="signFormTextField">Have no an Account?</div>
+				<button class="signFormButtons" id="signUpButton" type="button" onclick="signTypeSwitch(this.parentNode)">Sign Up</button>
+
+			</div>
 
 		</div>
+
+<!-- SIGN UP -->
+		
+		<div class="signUpForm" id="signUpForm">
+			<div class="signFormStructureBlock">
+				<div class="signTypeNameStyle">Sign Up</div>
+			</div>
+
+			<div class="signFormStructureBlock">
+				<div class="signFormTextField">first name <span>(more than 3 character)</span></div>
+				<input class="signFormInputField" type="text" 
+				id="firstNameInputField" 
+				placeholder="enter your first name here" maxlength="50" minlength="3"
+				onkeyup="signInFunction(this)" onclick="signInFunction(this)">
+			</div>
+
+			<div class="signFormStructureBlock">
+				<div class="signFormTextField" for="lname">last name <span>(more than 3 character)</span></div>
+				<input class="signFormInputField" type="text" 
+				id="lastNameInputField" 
+				placeholder="enter your last name here" maxlength="50" minlength="3"
+				onkeyup="signInFunction(this)" onclick="signInFunction(this)">
+			</div>
+
+			<div class="signFormStructureBlock">
+				<div class="signFormTextField" for="email">email address</div>
+				<input class="signFormInputField" type="text"
+				id="signUpFormEmailInputField" 
+				placeholder="enter your email here" maxlength="50" minlength="5" 
+				onkeyup="signInFunction(this)" onclick="signInFunction(this)">
+			</div>
+
+			<div class="signFormStructureBlock">
+				<div class="signFormTextField" for="password" p>password <span>(more than 5 character)</span></div>
+				<input class="signFormInputField" type="password" 
+				id="signUpFormPasswordInputField1"
+				placeholder="enter your password here" maxlength="50" minlength="5"
+				onkeyup="signInFunction(this)" onclick="signInFunction(this)">
+			</div>
+
+			<div class="signFormStructureBlock">
+				<div class="signFormTextField" for="password" p>password <span>repeat</span></div>
+				<input class="signFormInputField" type="password" 
+				id="signUpFormPasswordInputField2"
+				placeholder="enter your password here" maxlength="50" minlength="5"
+				onkeyup="signInFunction(this)" onclick="signInFunction(this)">
+			</div>
+
+			<div class="signFormButtonsStructureBlock">
+				<button class="signFormButtons" id="signIn" type="button" onclick="signUpFunction()">Create an Account</button>
+			</div>
+
+			<div class="signFormButtonsStructureBlock">
+				<div class="line" style="width: 600px;"></div>
+				<div class="signFormTextField">Have an Account?</div>
+				<button class="signFormButtons" type="button" onclick="signTypeSwitch(this.parentNode)">Sign In</button>
+
+			</div>
+
+		</div>
+
+
+
+	</div>
 
 		<script src="../src/scripts/script.js"></script>
 		<script src="../src/scripts/signFormScript.js"></script>

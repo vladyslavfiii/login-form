@@ -1,65 +1,82 @@
 //===============SIGN IN FUNCTION
 
-function signInFunction() {
+function signInFunction(input) {
+    backInputFieldStyle(input);
+
+    let inputValue = input.value;
+
     let alertMessage = document.createElement('Div');
     alertMessage.classList.add("alertMessage");
     let alertMessageText = "";
-
-    let email = document.getElementsByName('emailInput')[0].value;
-    let pass = document.getElementsByName('passwordInput')[0].value;
-
-    let emailInputField = document.getElementsByName('emailInput')[0];
-    let passwordInputField = document.getElementsByName('passwordInput')[0];
-
+    let signUpFormPasswordInputField1 = document.getElementById("signUpFormPasswordInputField1");
+    let signUpFormPasswordInputField2 = document.getElementById("signUpFormPasswordInputField2");
     let emailChekerCounter = 0;
 
-    backInputFieldStyle();
+    if (input.id === "signInFormEmailInputField" || input.id === "signUpFormEmailInputField") {
+        inputValue.split('').forEach(el => 
+        {
+            if (el === "@"){
+                emailChekerCounter += 1;
+            }}); 
 
-    document.getElementsByName('emailInput')[0].value.split('').forEach(el => 
-    {
-        if (el === "@"){
-            emailChekerCounter += 1;
-        }}); 
+        if (inputValue.indexOf('@') === -1 && inputValue.length > 0){
+            alertMessageText += "> email must contain @ character" + '<br>';
+            errorInputField(input);
+        }
+        if (emailChekerCounter > 1) {
+            alertMessageText += "> this field must contain only one @ character" + '<br>';
+            errorInputField(input);
+        }
+    }
+    if (inputValue.length === 0){
+        alertMessageText += "> this field is empty" + '<br>';
+        errorInputField(input);
+    }
+    if (inputValue.length < 5 && inputValue.length > 0){
+        alertMessageText += "> this field must contain more than 5 characters" + '<br>';
+        errorInputField(input);
+    }
+    if (inputValue.indexOf(' ') > -1){
+        alertMessageText += "> this field shouldn't contain 'space'" + '<br>';
+        errorInputField(input);
+    }
+    if (input.id === "firstNameInputField" || input.id === "lastNameInputField") {
+        if (containsOnlySymbols(input.value) != true) {
+            alertMessageText += "> this field shouldn't contain numbers or other symbols" + '<br>';
+            errorInputField(input);
+        }
+    }
+    if (signUpFormPasswordInputField1.value != signUpFormPasswordInputField2.value) {
+        alertMessageText += "> passwords must be the same" + '<br>';
+        errorInputField(signUpFormPasswordInputField1);
+        errorInputField(signUpFormPasswordInputField2);
+    }
+    else if (signUpFormPasswordInputField1.value.length != 0 && signUpFormPasswordInputField2.value.length) {
+        removeAlertMessage(signUpFormPasswordInputField1.parentNode);
+        removeAlertMessage(signUpFormPasswordInputField2.parentNode);
+        backInputFieldStyle(signUpFormPasswordInputField1);
+        backInputFieldStyle(signUpFormPasswordInputField2);
+    }
 
-    if (email.length === 0){
-        alertMessageText += "> email field is empty" + '<br>';
-        errorInputField(emailInputField);
-    }
-    if (email.length < 5 && email.length > 0){
-        alertMessageText += "> email field must contain email adress" + '<br>';
-        errorInputField(emailInputField);
-    }
-    if (email.indexOf('@') === -1 && email.length > 0){
-        alertMessageText += "> email must contain @ character" + '<br>';
-        errorInputField(emailInputField);
-    }
-    if (emailChekerCounter > 1) {
-        alertMessageText += "> email must contain only one @ character" + '<br>';
-        errorInputField(emailInputField);
-    }
-    if (email.indexOf(' ') > -1){
-        alertMessageText += "> email shouldn't contain 'space'" + '<br>';
-        errorInputField(emailInputField);
-    }
-    if (pass.length === 0){
-        alertMessageText += "> password field is empty" + '<br>';
-        errorInputField(passwordInputField);
-    }
-    if (pass.length < 5 && pass.length > 0){
-        alertMessageText += "> password must contain more than five character" + '<br>';
-        errorInputField(passwordInputField);
-    }
-    if (pass.indexOf(' ') > -1){
-        alertMessageText += "> password shouldn't contain 'space'" + '<br>';
-        errorInputField(passwordInputField);
-    }
-    if (alertMessageText.length != 0)
-    {
-        removeAlertMessage();
+    if (alertMessageText.length != 0) {
+        removeAlertMessage(input.parentNode);
         alertMessage.innerHTML = alertMessageText;
-        document.getElementsByClassName('signInForm')[0].appendChild(alertMessage);
+        input.parentNode.appendChild(alertMessage);
     }
     else{
-        login();
+        removeAlertMessage(input.parentNode);
+        backInputFieldStyle(input);
     }
+}
+
+function signInButtonFunction() {
+    let email = document.getElementById('signInFormEmailInputField');
+    let password = document.getElementById('signInFormPasswordInputField');
+
+    if (email.value.length != 0 && password.value.length != 0) {
+        if (email.classList.value != "signFormErrorInputField" && password.classList.value != "signFormErrorInputField") {
+            return login()
+        }
+    }
+    console.log("incorrect password or email");
 }

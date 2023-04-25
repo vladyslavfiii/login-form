@@ -1,3 +1,4 @@
+
 body{
   width: 100%;
   margin:  0px;
@@ -7,7 +8,7 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #80a3ac;
+  background: linear-gradient(#696969, #A9A9A9);
 }
 /*//////////////////////////////////////////////////*/
 
@@ -59,7 +60,7 @@ body{
 
 /*//////////////////////////////////////////////////*/
 
-#textInputField {
+/*#textInputField {
 	min-width: 480px;
 	max-width: 480px;
 	min-height: 25px;
@@ -80,7 +81,7 @@ body{
 	padding-bottom: 0px;
 
 }
-
+*/
 .submitButtonField{
 	width: 500px;
 	height: 25px;
