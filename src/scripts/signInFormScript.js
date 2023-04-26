@@ -1,6 +1,6 @@
 //===============SIGN IN FUNCTION
 
-function signInFunction(input) {
+function signFormFieldChecker(input) {
     backInputFieldStyle(input);
 
     let inputValue = input.value;
@@ -20,34 +20,34 @@ function signInFunction(input) {
             }}); 
 
         if (inputValue.indexOf('@') === -1 && inputValue.length > 0){
-            alertMessageText += "> email must contain @ character" + '<br>';
+            alertMessageText += "- email must contain @ character" + '<br>';
             errorInputField(input);
         }
         if (emailChekerCounter > 1) {
-            alertMessageText += "> this field must contain only one @ character" + '<br>';
+            alertMessageText += "- this field must contain only one @ character" + '<br>';
             errorInputField(input);
         }
     }
     if (inputValue.length === 0){
-        alertMessageText += "> this field is empty" + '<br>';
+        alertMessageText += "- this field is empty" + '<br>';
         errorInputField(input);
     }
     if (inputValue.length < 5 && inputValue.length > 0){
-        alertMessageText += "> this field must contain more than 5 characters" + '<br>';
+        alertMessageText += "- this field must contain more than 5 characters" + '<br>';
         errorInputField(input);
     }
     if (inputValue.indexOf(' ') > -1){
-        alertMessageText += "> this field shouldn't contain 'space'" + '<br>';
+        alertMessageText += "- this field shouldn't contain 'space'" + '<br>';
         errorInputField(input);
     }
     if (input.id === "firstNameInputField" || input.id === "lastNameInputField") {
         if (containsOnlySymbols(input.value) != true) {
-            alertMessageText += "> this field shouldn't contain numbers or other symbols" + '<br>';
+            alertMessageText += "- this field shouldn't contain numbers or other symbols" + '<br>';
             errorInputField(input);
         }
     }
     if (signUpFormPasswordInputField1.value != signUpFormPasswordInputField2.value) {
-        alertMessageText += "> passwords must be the same" + '<br>';
+        alertMessageText += "- passwords must be the same" + '<br>';
         errorInputField(signUpFormPasswordInputField1);
         errorInputField(signUpFormPasswordInputField2);
     }
@@ -72,6 +72,9 @@ function signInFunction(input) {
 function signInButtonFunction() {
     let email = document.getElementById('signInFormEmailInputField');
     let password = document.getElementById('signInFormPasswordInputField');
+
+    signFormFieldChecker(email);
+    signFormFieldChecker(password);
 
     if (email.value.length != 0 && password.value.length != 0) {
         if (email.classList.value != "signFormErrorInputField" && password.classList.value != "signFormErrorInputField") {
