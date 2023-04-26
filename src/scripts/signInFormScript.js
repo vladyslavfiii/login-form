@@ -1,16 +1,18 @@
 //===============SIGN IN FUNCTION
 
 function signFormFieldChecker(input) {
+
     backInputFieldStyle(input);
 
     let inputValue = input.value;
 
     let alertMessage = document.createElement('Div');
-    alertMessage.classList.add("alertMessage");
     let alertMessageText = "";
     let signUpFormPasswordInputField1 = document.getElementById("signUpFormPasswordInputField1");
     let signUpFormPasswordInputField2 = document.getElementById("signUpFormPasswordInputField2");
     let emailChekerCounter = 0;
+
+    alertMessage.classList.add("alertMessage");
 
     if (input.id === "signInFormEmailInputField" || input.id === "signUpFormEmailInputField" || input.id === "forgotPasswordFormEmailInputField") {
         inputValue.split('').forEach(el => 
@@ -19,7 +21,7 @@ function signFormFieldChecker(input) {
                 emailChekerCounter += 1;
             }}); 
 
-        if (inputValue.indexOf('@') === -1 && inputValue.length > 0){
+        if (inputValue.indexOf('@') === -1 && inputValue.length > 0) {
             alertMessageText += "- email must contain @ character" + '<br>';
             errorInputField(input);
         }
@@ -28,15 +30,15 @@ function signFormFieldChecker(input) {
             errorInputField(input);
         }
     }
-    if (inputValue.length === 0){
+    if (inputValue.length === 0) {
         alertMessageText += "- this field is empty" + '<br>';
         errorInputField(input);
     }
-    if (inputValue.length < 5 && inputValue.length > 0){
+    if (inputValue.length < 5 && inputValue.length > 0) {
         alertMessageText += "- this field must contain more than 5 characters" + '<br>';
         errorInputField(input);
     }
-    if (inputValue.indexOf(' ') > -1){
+    if (inputValue.indexOf(' ') > -1) {
         alertMessageText += "- this field shouldn't contain 'space'" + '<br>';
         errorInputField(input);
     }

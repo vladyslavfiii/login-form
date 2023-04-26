@@ -1,11 +1,11 @@
 //===============SIGN UP FUNCTION
 
-    let fname = document.getElementById('firstNameInputField');
-    let lname = document.getElementById('lastNameInputField');
-    let email = document.getElementById('signUpFormEmailInputField');
-    let pass1 = document.getElementById('signUpFormPasswordInputField1');
-    let pass2 = document.getElementById('signUpFormPasswordInputField2');
-    let error = "signFormErrorInputField";
+let fname = document.getElementById('firstNameInputField');
+let lname = document.getElementById('lastNameInputField');
+let email = document.getElementById('signUpFormEmailInputField');
+let pass1 = document.getElementById('signUpFormPasswordInputField1');
+let pass2 = document.getElementById('signUpFormPasswordInputField2');
+let error = "signFormErrorInputField";
 
 function signUpButtonFunction(){
 
@@ -30,6 +30,5 @@ function signUpFunction(){
     };
 
      const customerAccount = Object.create(customer);
-
      console.log(customerAccount)
 }

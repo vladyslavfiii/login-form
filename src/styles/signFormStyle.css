@@ -11,25 +11,53 @@
 	width: 700px;
 	height:100px;
 
-	font-size: 50px;
-	font-family: arial black;
-
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
 
+	font-size: 50px;
+	font-family: arial black;
 	color: white;
 }
 .title span{
-	color: red;
-		font-size: 50px;
+	font-size: 50px;
 	font-family: arial black;
+	color: red;
 }
+/*SIGN IN FORM*/
 .signInForm{
 	width: 700px;
 
 	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	border: 1px solid white;
+	background: #303030;
+
+	color: white;
+}
+/*SIGN UP FORM*/
+.signUpForm{
+	width: 700px;
+
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	border: 1px solid white;
+	background: #303030;
+
+	color: white;
+}
+/*FORGOT PASSWORD FORM*/
+.forgotPasswordForm{
+	width: 700px;
+
+	display: none;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -85,8 +113,8 @@
 	margin-bottom: 5px;
 }
 .signFormTextField span{
-	color: #A9A9A9;
 	font-size: 15px;
+	color: #A9A9A9;
 }
 .signFormInputField{
 	width: 600px;
@@ -94,27 +122,25 @@
 	border: 0px;
 	border-radius: 0px;
 
-	padding: 0;
-	margin-bottom: 5px;
-
 	font-size: 25px;
 	font-family: Consolas;
 
+	padding: 0;
+	margin-bottom: 5px;
 }
 .signFormErrorInputField{
 	width: 600px;
 
 	border: 0px;
 	border-radius: 0px;
+	background: white ;
+	
+	font-size: 25px;
+	font-family: Consolas;
+	color: #ff7e67;
 
 	padding: 0;
 	margin-bottom: 5px;
-
-	background: white ;
-	color: #ff7e67;
-
-	font-size: 25px;
-	font-family: Consolas;
 }
 .signFormButtons{
 	width: 200px;
@@ -126,7 +152,6 @@
 	align-items: center;
 
 	border: 0px;
-
 	background: #42b883;
 
 	font-family:Consolas;
@@ -138,47 +163,17 @@
 	background: black;
 	color: white;
 }
-
-/*SIGN UP*/
-.signUpForm{
-	width: 700px;
-
-	display: none;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-
-	border: 0px solid white;
-	background: #303030;
-
-	color: white;
-}
 .alertMessage{
 	width: 600px;
 
 	border: 0px;
-
 	background: white;
 
-	color: #A9A9A9;
-
-	font-family: Consolas;
 	font-size: 25px;
+	font-family: Consolas;
+	color: #A9A9A9;
 }
 .line{
 	height: 1px;
 	background: white;
-}
-.forgotPasswordForm{
-	width: 700px;
-
-	display: none;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-
-	border: 0px solid white;
-	background: #303030;
-
-	color: white;
 }

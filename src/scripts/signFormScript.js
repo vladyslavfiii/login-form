@@ -4,8 +4,6 @@ function signFormTypeSwitch(strValue){
 
     let str = strValue.parentNode;
 
-console.log(str.parentNode);
-
     let signInForm = document.getElementById('signInForm');
     let signUpForm = document.getElementById('signUpForm');
     let forgotPasswordForm = document.getElementById('forgotPasswordForm');
@@ -39,11 +37,10 @@ function removeAlertMessage(inputParentNode){
 }
 
 function login(){
-    console.log("wow")
+    console.log("login done")
 }
 
 function containsOnlySymbols(str) {
-    console.log(/^[A-Za-z]+$/.test(str));
     return /^[A-Za-z]+$/.test(str);
 }
 
@@ -52,5 +49,5 @@ function errorInputField(str){
 }
 
 function backInputFieldStyle(str){
-        str.classList.replace('signFormErrorInputField', 'signFormInputField');
+    str.classList.replace('signFormErrorInputField', 'signFormInputField');
 }
