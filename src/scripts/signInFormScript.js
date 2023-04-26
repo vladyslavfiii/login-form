@@ -12,7 +12,7 @@ function signFormFieldChecker(input) {
     let signUpFormPasswordInputField2 = document.getElementById("signUpFormPasswordInputField2");
     let emailChekerCounter = 0;
 
-    if (input.id === "signInFormEmailInputField" || input.id === "signUpFormEmailInputField") {
+    if (input.id === "signInFormEmailInputField" || input.id === "signUpFormEmailInputField" || input.id === "forgotPasswordFormEmailInputField") {
         inputValue.split('').forEach(el => 
         {
             if (el === "@"){

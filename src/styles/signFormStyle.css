@@ -15,11 +15,16 @@
 	font-family: arial black;
 
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: center;
 	align-items: center;
 
 	color: white;
+}
+.title span{
+	color: red;
+		font-size: 50px;
+	font-family: arial black;
 }
 .signInForm{
 	width: 700px;
@@ -163,4 +168,17 @@
 .line{
 	height: 1px;
 	background: white;
+}
+.forgotPasswordForm{
+	width: 700px;
+
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	border: 0px solid white;
+	background: #303030;
+
+	color: white;
 }

@@ -6,7 +6,7 @@
 		<link rel="stylesheet" href="../src/styles/style.css">
 		<link rel="stylesheet" href="../src/styles/signFormStyle.css">
 		
-		<link rel="shortcut icon" type="image/ico" href="../src/favicon.ico"/>
+		<link rel="shortcut icon" type="image/ico" href="../src/styles/favicon.ico"/>
 	</head>
 	
 	<body>
@@ -14,7 +14,7 @@
 <!-- SIGN FORM -->
 	<div class="sign">
 
-		<div class="title">F.III</div>
+		<div class="title">F<span>.</span>III</div>
 
 <!-- SIGN IN FORM -->
 
@@ -43,7 +43,7 @@
 			<div class="signFormButtonsStructureBlock">
 
 				<button class="signFormButtons" id="signInButton" type="button" onclick="signInButtonFunction()">Sign In</button>
-				<button class="signFormButtons" id="signInForgotPasswordButton" type="button">Forgot Password</button> 
+				<button class="signFormButtons" id="signInForgotPasswordButton" type="button" onclick="signFormTypeSwitch(this)">Forgot Password</button> 
 
 			</div>
 
@@ -51,7 +51,7 @@
 
 				<div class="line" style="width: 600px;"></div>
 				<div class="signFormTextField">Have no an Account?</div>
-				<button class="signFormButtons" id="signUpButton" type="button" onclick="signTypeSwitch(this.parentNode)">Sign Up</button>
+				<button class="signFormButtons" id="signUpButton" type="button" onclick="signFormTypeSwitch(this)">Sign Up</button>
 
 			</div>
 
@@ -111,13 +111,38 @@
 			<div class="signFormButtonsStructureBlock">
 				<div class="line" style="width: 600px;"></div>
 				<div class="signFormTextField">Have an Account?</div>
-				<button class="signFormButtons" type="button" onclick="signTypeSwitch(this.parentNode)">Sign In</button>
+				<button class="signFormButtons" type="button" onclick="signFormTypeSwitch(this)">Sign In</button>
 
 			</div>
 
 		</div>
 
+<!-- FORGOT PASSWORD -->
+		<div class="forgotPasswordForm" id="forgotPasswordForm">
 
+			<div class="signFormStructureBlock">
+				<div class="signTypeNameStyle">Forgot Password</div>
+			</div>
+
+			<div class="signFormStructureBlock">
+				<div class="signFormTextField">email address</div>
+				<input class="signFormInputField" type="text"
+				id="forgotPasswordFormEmailInputField" 
+				placeholder="enter your email here" maxlength="50" minlength="5" 
+				onkeyup="signFormFieldChecker(this)" onclick="signFormFieldChecker(this)">
+			</div>
+
+			<div class="signFormButtonsStructureBlock">
+				<button class="signFormButtons" id="forgotPasswordSubmitButton" type="button">Submit email</button> 
+			</div>
+
+			<div class="signFormButtonsStructureBlock">
+				<div class="line" style="width: 600px;"></div>
+				<div class="signFormTextField">Have an Account?</div>
+				<button class="signFormButtons" id="forgotPasswordSignInButton" type="button" onclick="signFormTypeSwitch(this)">Sign In</button>
+			</div>
+			
+		</div>
 
 	</div>
 

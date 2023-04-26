@@ -1,17 +1,34 @@
 //===============SIGN TYPE SWITCH FUNCTION
 
-function signTypeSwitch(str){
+function signFormTypeSwitch(strValue){
+
+    let str = strValue.parentNode;
+
+console.log(str.parentNode);
 
     let signInForm = document.getElementById('signInForm');
     let signUpForm = document.getElementById('signUpForm');
+    let forgotPasswordForm = document.getElementById('forgotPasswordForm');
 
-    if (str.parentNode.id === "signInForm"){
+    if (str.parentNode.id === "signInForm" && strValue.id != "signInForgotPasswordButton") {
         signInForm.style.display = "none";
         signUpForm.style.display = "flex";
+        forgotPasswordForm.style.display = "none";
+    }    
+    if (str.parentNode.id === "signInForm" && strValue.id === "signInForgotPasswordButton") {
+        signUpForm.style.display = "none";
+        signInForm.style.display = "none";
+        forgotPasswordForm.style.display = "flex";
     }
-    if (str.parentNode.id === "signUpForm"){
+    if (str.parentNode.id === "forgotPasswordForm") {
         signInForm.style.display = "flex";
         signUpForm.style.display = "none";
+        forgotPasswordForm.style.display = "none";
+    }
+    if (str.parentNode.id === "signUpForm") {
+        signInForm.style.display = "flex";
+        signUpForm.style.display = "none";
+        forgotPasswordForm.style.display = "none";
     }
 }
 
